@@ -29,7 +29,7 @@ public class Card extends javax.swing.JPanel {
     public Card() {
         initComponents();
         setOpaque(false);
-        color1 = Color.BLACK;
+       color1 = new Color(0, 120, 31);
         color2 = Color.WHITE;
     }
     
@@ -93,18 +93,22 @@ public class Card extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
 @Override
-public void paintComponents(Graphics grphcs){
-    Graphics2D g2=(Graphics2D)grphcs;
-        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-        GradientPaint g = new GradientPaint(0, 0, color1, 0, getHeight(), color2);
-        g2.setPaint(g);
-        g2.fillRoundRect(0, 0, getWidth(), getHeight(), 15, 15);
-        g2.setColor(new Color(255, 255, 255, 50));
-        g2.setColor(Color.GREEN);
-        g2.fillOval(getWidth()- (getHeight() / 2), 10, getHeight(), getHeight());
-        g2.fillOval(getWidth()- (getHeight() / 2) - 20,  getHeight()/2+20, getHeight(), getHeight());
-        super.paintComponent(grphcs);
+protected void paintComponent(Graphics g) {
+    super.paintComponent(g);
+    Graphics2D g2 = (Graphics2D) g.create();
+
+    // Enable anti-aliasing for smoother graphics
+    g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+
+    // Create gradient from top-left to bottom-right
+    GradientPaint gp = new GradientPaint(0, 0, color1, getWidth(), getHeight(), color2);
+
+    g2.setPaint(gp);
+    g2.fillRoundRect(0, 0, getWidth(), getHeight(), 20, 20); // rounded rectangle
+
+    g2.dispose();
 }
+
         
         
     // Variables declaration - do not modify//GEN-BEGIN:variables
