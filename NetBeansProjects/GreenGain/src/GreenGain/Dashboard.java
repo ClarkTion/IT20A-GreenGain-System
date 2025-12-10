@@ -20,6 +20,7 @@ public class Dashboard extends javax.swing.JFrame {
         jLayeredPane1 = new javax.swing.JLayeredPane();
         panelBorder2 = new GreenGain.PanelBorder();
         menu1 = new GreenGain.Menu();
+        header2 = new GreenGain.Header();
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
         jLayeredPane1.setLayout(jLayeredPane1Layout);
@@ -34,7 +35,9 @@ public class Dashboard extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        panelBorder2.setBackground(new java.awt.Color(255, 255, 255));
+        panelBorder2.setBackground(new java.awt.Color(242, 239, 239));
+
+        header2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         javax.swing.GroupLayout panelBorder2Layout = new javax.swing.GroupLayout(panelBorder2);
         panelBorder2.setLayout(panelBorder2Layout);
@@ -42,11 +45,16 @@ public class Dashboard extends javax.swing.JFrame {
             panelBorder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBorder2Layout.createSequentialGroup()
                 .addComponent(menu1, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 583, Short.MAX_VALUE))
+                .addGap(0, 0, 0)
+                .addComponent(header2, javax.swing.GroupLayout.PREFERRED_SIZE, 696, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         panelBorder2Layout.setVerticalGroup(
             panelBorder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(menu1, javax.swing.GroupLayout.DEFAULT_SIZE, 503, Short.MAX_VALUE)
+            .addGroup(panelBorder2Layout.createSequentialGroup()
+                .addComponent(header2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -98,6 +106,7 @@ public class Dashboard extends javax.swing.JFrame {
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private GreenGain.Header header2;
     private javax.swing.JLayeredPane jLayeredPane1;
     private GreenGain.Menu menu1;
     private GreenGain.PanelBorder panelBorder2;
